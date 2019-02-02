@@ -1,31 +1,33 @@
-{% include base.html %}
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>VA Lighthouse | API Landscape Analysis and Roadmapping Project </title>
-      <meta name="description" content="Skylight's work in support of the VA Lighthouse's API Landscape Analysis and Roadmapping Project.">
-      <meta name="keywords" content="veterans affairs, lighthouse, apis, landscape analysis, roadmap">
-      <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
-      <link rel="stylesheet" href="{{base}}/styles/site.css?v=1" type="text/css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script src="{{ '/js/jquery.awesomeCloud-0.2.min.js' | prepend:site.baseurl }}"></script>
-      <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-      <script type="text/javascript" src="{{base}}/js/script.js?v=1"></script>
-   </head>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  {% include head.html %}
+  <body>
 
-   <body>
-      <a href="#content" class="sr-only sr-only-focusable">Skip to Main Content</a>
-      <header role="banner">
-         {% include nav.html %}
-      </header>
-      <main id="content" tabindex="-1">
-         <div class="container mb-5 mt-5">
-            <section>
-              {{ content }}
-            </section>
-         </div>
-      </main>
-      {% include footer.html %}
-   </body>
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+
+              {% include header.html %}
+              {% include alert.html %}
+    	        {{ content }}
+              {% include footer.html %}
+
+            </div>
+          </div>
+
+          <div id="sidebar">
+          <div class="inner">
+
+            {% include sidebar_nav.html %}
+
+            {% include sidebar_partners.html %}
+
+          </div>
+          </div>
+
+      </div>
+
+{% include footer_scripts.html %}
+
+</body>
 </html>

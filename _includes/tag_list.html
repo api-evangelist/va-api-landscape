@@ -1,8 +1,0 @@
-<ul>
-{% assign topics = include.topics %}
-{% for topic in topics %}
-  <li>
-    {{ topic.word }} ({% include number_with_commas.html number=topic.word_count %})
-  </li>
-{% endfor %}
-</ul>
